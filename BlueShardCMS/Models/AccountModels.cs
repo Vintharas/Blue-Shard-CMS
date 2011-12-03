@@ -47,7 +47,6 @@ namespace BlueShardCMS.Models
         public bool RememberMe { get; set; }
     }
 
-
     public class RegisterModel
     {
         [Required]
