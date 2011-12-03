@@ -1,3 +1,5 @@
+*.dotCover
+
 # ReSharper meta directory
 _ReSharper*
 
