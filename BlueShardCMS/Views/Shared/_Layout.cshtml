@@ -4,35 +4,30 @@
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
     <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+    
 </head>
-
 <body>
     <div class="page">
-
-        <div id="header">
+        <header id="header">
             <div id="title">
-                <h1>My MVC Application</h1>
+                <h1>BlueShard CMS</h1>
             </div>
-
             <div id="logindisplay">
                 @Html.Partial("_LogOnPartial")
             </div>
-
-            <div id="menucontainer">
-
-                <ul id="menu">
+            <nav id="menucontainer">
+               <ul id="menu">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                 </ul>
-
-            </div>
-        </div>
-
+            </nav>
+        </header>
         <div id="main">
             @RenderBody()
-            <div id="footer">
-            </div>
         </div>
+        <footer id="footer">
+        
+        </footer>
     </div>
 </body>
 </html>

@@ -12,6 +12,9 @@ namespace BlueShardCMS.Model.Entities
         public DateTime PublishingDate { get; set; }
 
         public int CategoryId { get; set; }
-        public IEnumerable<int> TagIds { get; set; } 
+        public IEnumerable<int> TagIds { get; set; }
+
+        public string Introduction { get; set; }
+        public bool HasIntroduction { get { return Introduction != ""; } }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BlueShardCMS.Model.Entities;
+using BlueShardCMS.Models;
 using BlueShardCMS.Storage.Infrastructure;
 using BlueShardCMS.Storage.Interfaces;
 
@@ -13,9 +14,9 @@ namespace BlueShardCMS.Controllers
     {
         private readonly IPageRepository pageRepository;
 
-        public PageController()
+        public PageController(IPageRepository pageRepository)
         {
-            pageRepository = new PageRepository();    
+            this.pageRepository = pageRepository;
         }
 
         //
@@ -23,7 +24,12 @@ namespace BlueShardCMS.Controllers
         public ActionResult Index()
         {
             Page homePage = pageRepository.GetHomePage();
-            return View(homePage);
+            IEnumerable<Page> navigationPages = pageRepository.GetNavigationPages();
+            return View(new PageViewModel
+                {
+                    PageDisplayed = homePage, 
+                    NavigationPages = navigationPages
+                });
         }
 
 

@@ -45,6 +45,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,10 +53,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\PageControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BlueShardCMS.Model\BlueShardCMS.Model.csproj">
+      <Project>{473B01A0-C2EF-4820-9EE7-0435FAAB59C6}</Project>
+      <Name>BlueShardCMS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlueShardCMS.Storage\BlueShardCMS.Storage.csproj">
+      <Project>{40C9F9DD-B360-4C33-A278-D28BFC690D7B}</Project>
+      <Name>BlueShardCMS.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlueShardCMS\BlueShardCMS.csproj">
+      <Project>{D03DB053-3BF4-4185-99FA-2F2BA8FFA01B}</Project>
+      <Name>BlueShardCMS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
