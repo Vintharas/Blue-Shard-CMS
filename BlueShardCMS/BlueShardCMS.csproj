@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\PageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +128,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Fonts\" />
+    <Folder Include="Content\Images\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlueShardCMS.Model\BlueShardCMS.Model.csproj">

@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,9 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Blog.cs" />
     <Compile Include="Entities\BlogPost.cs" />
+    <Compile Include="Entities\BlogPostType.cs" />
+    <Compile Include="Entities\BrowsableContent.cs" />
+    <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Content.cs" />
+    <Compile Include="Entities\Footer.cs" />
+    <Compile Include="Entities\Header.cs" />
     <Compile Include="Entities\Page.cs" />
+    <Compile Include="Entities\Tag.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
